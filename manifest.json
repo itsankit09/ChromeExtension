@@ -1,5 +1,17 @@
 {
   "manifest_version": 2,
   "name": "Data Scrap",
-  "version": "0.1"
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://testbook.com/**"
+      ],
+      "js": ["jquery-2.1.3.min.js","content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
